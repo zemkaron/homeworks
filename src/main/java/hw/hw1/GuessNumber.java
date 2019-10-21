@@ -10,7 +10,7 @@ public class GuessNumber {
         int numberToGuess = random.nextInt(100);
         Scanner input = new Scanner(System.in);
         int guess;
-        boolean win = false;
+        boolean isCorrect = false;
 
         System.out.println("Enter your name: ");
         String name = input.nextLine();
@@ -19,12 +19,12 @@ public class GuessNumber {
 
         System.out.println("Guess a number between 1 and 100: ");
 
-        while (!win) {
+        while (!isCorrect) {
 
             guess = input.nextInt();
 
             if (guess == numberToGuess) {
-                win = true;
+                isCorrect = true;
             } else if (guess < numberToGuess) {
                 System.out.println("Your guess is too small. Please try again..");
             } else
